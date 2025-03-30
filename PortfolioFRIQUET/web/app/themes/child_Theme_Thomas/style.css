@@ -1,0 +1,290 @@
+/*
+Theme Name: Friquet Thomas theme
+Theme URI: https://romanfink.com/makoa
+Template: makoa
+Author: Thomas
+Author URI: https://romanfink.com
+Description: Makoa is a minimalist theme for personal websites. Create your perfect website with just a few clicks, and share all the awesome things you do with the world!
+Tags: one-column,custom-colors,custom-menu,editor-style,full-site-editing,block-patterns,block-styles,blog,portfolio
+Version: 1.0.4.1743259515
+Updated: 2025-03-29 14:45:15
+
+*/
+/* Styles pour la page d'archive portfolio */
+.container.portfolio-archive {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.archive-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--wp--preset--color--primary);
+}
+
+/* Grille de portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Élément individuel du portfolio */
+.portfolio-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(255, 227, 227, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Conteneur pour l'image */
+.portfolio-thumbnail {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* Ratio 4:3 */
+    overflow: hidden;
+}
+
+.portfolio-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Effet de survol sur l'image */
+.portfolio-item:hover .portfolio-thumbnail img {
+    transform: scale(1.05);
+}
+
+/* Superposition au survol */
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(179, 179, 179, 0.7);
+    color: #332d2d;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-title {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.view-project {
+    display: inline-block;
+    padding: 5px 15px;
+    background: var(--wp--preset--color--primary-second, #333);
+    color: #201e1e;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+   
+}
+
+.view-project:hover {
+    background: var(--wp--preset--color--primary, #111);
+}
+
+/* Pagination */
+.portfolio-archive .pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Styles pour single-portfolio.php */
+.portfolio-single {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.portfolio-navigation {
+    margin-bottom: 30px;
+}
+
+.back-to-portfolio {
+    display: inline-block;
+    color: var(--wp--preset--color--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-to-portfolio:hover {
+    text-decoration: underline;
+}
+
+.portfolio-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.portfolio-title {
+    font-size: 2.8rem;
+    margin: 0;
+    color: var(--wp--preset--color--primary);
+}
+
+.portfolio-featured-image {
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.portfolio-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-content-wrapper {
+    margin-bottom: 50px;
+}
+
+.portfolio-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.portfolio-meta-box {
+    background-color: var(--wp--preset--color--background-secondary, #f8f8f8);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.meta-title {
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--wp--preset--color--primary);
+}
+
+.meta-item {
+    margin-bottom: 20px;
+}
+
+.meta-item h4 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    color: var(--wp--preset--color--secondary);
+}
+
+.meta-item p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--wp--preset--color--primary-second, #333);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.category-badge {
+    background: var(--wp--preset--color--primary-second, #333);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Galerie */
+.portfolio-gallery {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.gallery-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--wp--preset--color--primary);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navigation entre projets */
+.portfolio-navigation-links {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.prev-next-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-previous, .nav-next {
+    max-width: 45%;
+}
+
+.nav-previous a, .nav-next a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--wp--preset--color--primary);
+}
+
+.nav-direction {
+    font-size: 0.9rem;
+    color: var(--wp--preset--color--secondary);
+}
+
+.nav-title {
+    font-weight: 500;
+    margin-top: 5px;
+}
